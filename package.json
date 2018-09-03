@@ -1,0 +1,21 @@
+{
+  "name": "webprodutos",
+  "version": "1.0.0",
+  "description": "CRUD de produtos (e grupo de produtos) usando Node.js, Angular 1.5 e Knexjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renatodeyvson/webprodutos.git"
+  },
+  "author": "renatodeyvson",
+  "bugs": {
+    "url": "https://github.com/renatodeyvson/webprodutos/issues"
+  },
+  "homepage": "https://github.com/renatodeyvson/webprodutos#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
