@@ -2,11 +2,49 @@
 <html ng-app="webprodutosApp">
     <head>
             <link rel="stylesheet" href="main.css">
+
             <title>webprodutos</title>
+
+            <!--AngularJS-->
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+            <!--Main script-->
+            <script src="main.js"></script>
     </head>
     <body>
-        <h1>webprodutos</h1>
-        <script src=”https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-        <script src="main.js"></script>
+        <h1>WEBPRODUTOS</h1><br>
+
+        <div ng-controller="ProdutosController">
+
+          <h2>ADICIONAR ou REMOVER produto</h2>
+          
+          <form class="form-inline" name="formProduto">
+              <p>Nome:</p>
+              <input type="text" ng-model="produto.nome">
+              <p>Quantidade:</p>
+              <input type="number" ng-model="produto.quantidade"><br><br>
+              <button ng-click="adicionaProduto()">Adicionar</button>
+              <button ng-click="removeProduto()">Remover</button>
+          </form><br>
+
+          <h2>Lista de produtos</h2>
+
+          <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="produto in produtos">
+                    <td><strong>{{ produto.nome }}</strong></td>
+                    <td>{{ produto.quantidade }}</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+
+        </div>
     </body>
 </html>
